@@ -6,26 +6,38 @@
     <title>千机数据库管理软件 GDDBStudio - 跨数据库管理客户端</title>
     <meta name="description" content="千机数据库管理软件（GDDBStudio）是一款桌面端跨数据库管理客户端，支持 MySQL、PostgreSQL、SQL Server、Oracle、达梦、金仓等主流及国产数据库。">
     <link rel="icon" href="assets/app.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#091c2b">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#top">跳至主要内容</a>
+<svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12M15 9v12M3 15h18"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m7 6-6 6 6 6m10-12 6 6-6 6M14 3l-4 18"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-window" viewBox="0 0 24 24"><path d="m3 5 8-1v7H3zm10-1 8-1v8h-8zM3 13h8v7l-8-1zm10 0h8v8l-8-1z"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="3"/><path d="m6 8 4 4-4 4m7 0h5"/></symbol>
+</svg>
 
 <header class="site-header">
     <div class="container header-inner">
         <a href="#top" class="brand">
             <img src="assets/app.svg" alt="" width="36" height="36">
             <span class="brand-text">
-                <strong>千机数据库管理软件</strong>
-                <small>GDDBStudio</small>
+                <strong>GDDB<span>Studio</span></strong>
+                <small>千机数据库管理软件</small>
             </span>
         </a>
-        <nav class="site-nav">
+        <button class="menu-toggle" type="button" aria-controls="siteNav" aria-expanded="false" hidden>菜单 <span aria-hidden="true">+</span></button>
+        <nav class="site-nav" id="siteNav" aria-label="主要导航">
             <a href="#features">产品特点</a>
-            <a href="#modules">功能模块</a>
+            <a href="#demo">功能演示</a>
             <a href="#databases">支持数据库</a>
-            <a href="#download">下载</a>
-            <a href="#security">安全说明</a>
             <a href="#changelog">更新日志</a>
+            <a class="nav-download" href="#download">下载客户端 <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg></a>
         </nav>
     </div>
 </header>
@@ -34,54 +46,64 @@
 
     <section class="hero">
         <div class="container hero-inner">
-            <span class="badge" id="heroVersion">最新版本</span>
-            <h1>千机数据库管理软件</h1>
-            <p class="hero-sub">一个客户端，统一管理 MySQL、PostgreSQL、SQL Server、Oracle、达梦、金仓等多种数据库</p>
-            <p class="hero-desc">连接管理、对象浏览、数据编辑、SQL 编写与执行、表结构设计、数据导入导出、备份转储一站式完成，本地桌面运行，连接配置与运行数据均保存在用户本机。</p>
-            <div class="hero-actions">
-                <a class="btn btn-primary" href="#download">立即下载</a>
-                <a class="btn btn-ghost" href="#features">了解功能</a>
+            <div class="hero-copy">
+                <div class="hero-eyebrow"><span class="status-dot"></span> YOUR DATA. ONE STUDIO.</div>
+                <h1>让数据连接，<br><span>更有章法。</span></h1>
+                <p class="hero-sub">千机数据库管理软件 · GDDBStudio</p>
+                <p class="hero-desc">从 SQL 到数据编辑，从主流数据库到国产信创。<br class="desktop-break">将日常数据库工作，收拢到一个专注的桌面工作台。</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#download"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> 下载客户端 <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                    <a class="btn btn-ghost" href="#demo">探索产品 <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="hero-meta"><span class="badge" id="heroVersion">当前版本</span><span>Windows / UOS / 麒麟 / Linux</span></div>
             </div>
-            <ul class="hero-tags">
-                <li>开源 · Apache-2.0</li>
-                <li>Windows / 银河麒麟 / 统信 UOS / Linux</li>
-                <li>信创数据库友好</li>
-            </ul>
+            <div class="hero-visual">
+                <div class="visual-caption"><span>THE DATABASE WORKSPACE</span><span>SQL / DATA / SCHEMA</span></div>
+                <div class="app-frame">
+                    <div class="frame-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>GDDBStudio / 查询工作区</span><span class="frame-status"><span class="status-dot"></span> 桌面客户端</span></div>
+                    <a class="screenshot-link hero-shot" href="assets/screenshots/sql-editor.png" target="_blank" rel="noopener"><img src="assets/screenshots/sql-editor.png" alt="GDDBStudio SQL 编辑器真实界面，包含连接树、查询编辑器和结果集" width="1280" height="800" fetchpriority="high"><span class="zoom-label">查看真实界面 ↗</span></a>
+                    <div class="frame-footer"><span><span class="status-dot"></span> 本地工作台</span><span>连接 · 查询 · 设计 · 传输</span></div>
+                </div>
+                <div class="visual-note"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg><div><strong>多种数据库，同一个工作台</strong><span>MySQL · PostgreSQL · 达梦 · 金仓 …</span></div></div>
+            </div>
         </div>
+        <div class="container hero-bottom"><span>专为开发者、DBA 与数据库运维打造</span><a href="#demo">向下探索 <span aria-hidden="true">↓</span></a></div>
     </section>
 
-    <section class="section preview" id="preview">
-        <div class="container">
-            <figure class="shot-main">
-                <a href="assets/screenshots/data-grid.png" target="_blank" rel="noopener"><img src="assets/screenshots/data-grid.png" alt="千机数据库管理软件数据网格界面" loading="lazy"></a>
-                <figcaption>左侧连接树、中间多标签数据网格、右侧信息面板，常用操作一屏完成</figcaption>
-            </figure>
+    <section class="capability-strip" aria-label="产品概览">
+        <div class="container capability-inner">
+            <p>连接不止一种<br><strong>体验始终如一</strong></p>
+            <div><strong>20<span>种</span></strong><span>已注册数据库类型</span></div>
+            <div><strong>12<span>种</span></strong><span>国产信创数据库</span></div>
+            <div><strong>01</strong><span>统一桌面工作台</span></div>
+            <div class="strip-note"><span class="status-dot"></span> 配置与历史，本地存储</div>
         </div>
     </section>
 
     <section class="section" id="features">
         <div class="container">
-            <h2 class="section-title">产品特点</h2>
-            <p class="section-lead">为日常数据库运维、开发与测试工作设计，界面布局贴近常用数据库客户端，上手无门槛。</p>
+            <p class="eyebrow">BUILT FOR YOUR WORKFLOW</p>
+            <h2 class="section-title">少一点切换，多一点专注。</h2>
+            <p class="section-lead">把连接、查询、编辑与维护串在一起，让工具跟上你的工作节奏。</p>
             <div class="grid grid-4">
                 <article class="card">
-                    <div class="card-icon">1</div>
+                    <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg></div>
                     <h3>多数据库统一入口</h3>
                     <p>MySQL、MariaDB、SQLite、PostgreSQL、SQL Server、Oracle、Redis、MongoDB 以及多款国产数据库，统一在一个软件中管理。</p>
                 </article>
                 <article class="card">
-                    <div class="card-icon">2</div>
+                    <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg></div>
                     <h3>所见即所得的数据编辑</h3>
                     <p>分页浏览、筛选、查找替换、单元格编辑、新增删除、设为 NULL，支持事务提交与撤销修改，编辑过程可控。</p>
                 </article>
                 <article class="card">
-                    <div class="card-icon">3</div>
-                    <h3>强大的 SQL 编辑器</h3>
+                    <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></div>
+                    <h3>让 SQL 编写更顺手</h3>
                     <p>语法高亮、自动完成、整段或选中执行、停止执行、多结果集展示、SQL 美化，并保留执行历史与已保存查询。</p>
                 </article>
                 <article class="card">
-                    <div class="card-icon">4</div>
-                    <h3>本地运行，数据不外传</h3>
+                    <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div>
+                    <h3>本地运行，工作留在本机</h3>
                     <p>连接配置、界面设置、SQL 历史与运行日志保存在本机，软件不做外部网络上报。</p>
                 </article>
             </div>
@@ -90,8 +112,8 @@
 
     <section class="section section-alt" id="modules">
         <div class="container">
-            <h2 class="section-title">功能模块</h2>
-            <p class="section-lead">覆盖数据库日常工作的主要场景。</p>
+            <details class="toolkit">
+                <summary><span><span class="eyebrow">EVERYDAY TOOLKIT</span><strong>一个工作台，九种日常能力。</strong></span><span class="toolkit-hint">展开功能清单 <span aria-hidden="true">+</span></span></summary>
             <div class="grid grid-3">
                 <div class="module">
                     <h3>连接管理</h3>
@@ -130,13 +152,15 @@
                     <p>查看 ER 模型辅助理解表关系；支持主题、界面字体、编辑器字体、自动提交、删除确认、查询行数上限等个性化设置。</p>
                 </div>
             </div>
+            </details>
         </div>
     </section>
 
     <section class="section section-alt" id="demo">
         <div class="container">
-            <h2 class="section-title">功能演示</h2>
-            <p class="section-lead">以下截图来自软件实际界面。</p>
+            <p class="eyebrow">A CLOSER LOOK</p>
+            <h2 class="section-title">不是概念图。是你的下一个工作台。</h2>
+            <p class="section-lead">从连接到结果，亲眼看看每一步。所有截图均来自软件实际界面，可点击放大。</p>
 
             <div class="demo-row">
                 <div class="demo-text">
@@ -164,6 +188,7 @@
                     </ul>
                 </div>
                 <div class="demo-shots">
+                    <a href="assets/screenshots/data-grid.png" target="_blank" rel="noopener"><img src="assets/screenshots/data-grid.png" alt="数据网格分页浏览和编辑界面" loading="lazy"></a>
                     <a href="assets/screenshots/data-filter.png" target="_blank" rel="noopener"><img src="assets/screenshots/data-filter.png" alt="数据筛选条件构建界面" loading="lazy"></a>
                 </div>
             </div>
@@ -219,8 +244,9 @@
 
     <section class="section" id="databases">
         <div class="container">
-            <h2 class="section-title">支持的数据库</h2>
-            <p class="section-lead">实际可用性取决于对应驱动、操作系统组件、数据库版本与账号权限。软件已内置常见驱动，无需额外安装驱动包（以发布版本说明为准）。</p>
+            <p class="eyebrow">MANY DATABASES. ONE STUDIO.</p>
+            <h2 class="section-title">你的数据库，我们的共同语言。</h2>
+            <p class="section-lead">从熟悉的关系型数据库，到 NoSQL 与国产信创生态。保留你的选择，统一操作体验。</p>
             <div class="db-groups">
                 <div class="db-group">
                     <h3>通用关系型</h3>
@@ -246,16 +272,22 @@
                 </div>
             </div>
             <p class="note">连接时可选择数据库类型，系统会自动预填默认端口与初始库，并可通过“国产信创”标签快速筛选。</p>
+            <p class="compatibility-note">实际可用性取决于对应驱动、操作系统组件、服务端版本及账号权限。协议兼容型数据库的对象管理能力可能存在差异。</p>
         </div>
     </section>
 
     <section class="section section-alt" id="download">
         <div class="container">
-            <h2 class="section-title">下载安装</h2>
-            <p class="section-lead">当前版本 <strong id="downloadVersion"></strong>，发布日期 <span id="downloadDate"></span>。如有新版本，请回到本页面下载最新安装包。</p>
+            <p class="eyebrow">READY WHEN YOU ARE</p>
+            <h2 class="section-title">下一次连接，从这里开始。</h2>
+            <p class="section-lead">选择你的桌面系统，下载后解压运行。<br>当前版本 <strong id="downloadVersion"></strong><span class="meta-divider">/</span>发布于 <span id="downloadDate"></span></p>
             <div class="grid grid-3" id="downloadList"></div>
-            <div class="install-steps">
-                <h3>快速入门</h3>
+            <noscript><p class="note">请启用 JavaScript 查看各平台下载入口，或前往 <a href="https://github.com/tom316-design/gddbstudio-website/releases/latest">GitHub Releases</a> 下载安装包。</p></noscript>
+            <p class="download-footnote">安装包通过 GitHub Releases 提供 · 升级前建议备份连接配置，并将新版本解压到新目录</p>
+            <details class="install-steps">
+                <summary><span>第一次使用？从这份快速入门开始。</span><span aria-hidden="true">+</span></summary>
+                <div class="install-content">
+                <div>
                 <ol>
                     <li>下载对应系统的安装包，解压到任意目录，双击运行 <code>GDDBStudio.exe</code>（Windows）或目录内的 <code>GDDBStudio</code> 程序（Linux）。</li>
                     <li>点击工具栏 <strong>新建连接</strong>，选择数据库类型。</li>
@@ -265,18 +297,21 @@
                     <li>点击 <strong>新建查询</strong>，编写并执行 SQL。</li>
                 </ol>
                 <p class="note">想先熟悉软件，可以选择 SQLite，无需部署数据库服务，也无需填写主机和端口。</p>
+                </div>
                 <figure class="shot-inline">
                     <a href="assets/screenshots/welcome.png" target="_blank" rel="noopener"><img src="assets/screenshots/welcome.png" alt="软件欢迎首页" loading="lazy"></a>
                     <figcaption>首次启动时的欢迎首页，提供新建连接入口和三步上手指引</figcaption>
                 </figure>
-                <p class="note">升级方法：下载新版本安装包，解压到新目录即可。连接配置保存在用户目录中，一般无需重新配置。</p>
-            </div>
+                </div>
+            </details>
         </div>
     </section>
 
     <section class="section" id="security">
         <div class="container">
-            <h2 class="section-title">安全说明</h2>
+            <p class="eyebrow">LOCAL FIRST. CLEAR BY DESIGN.</p>
+            <h2 class="section-title">本地优先，保护方式说清楚。</h2>
+            <p class="section-lead">不夸大安全承诺。了解不同系统的密码保护方式，再选择适合你的使用策略。</p>
             <div class="grid grid-2">
                 <div class="card">
                     <h3>Windows 版密码保护</h3>
@@ -300,7 +335,9 @@
 
     <section class="section section-alt" id="changelog">
         <div class="container">
-            <h2 class="section-title">更新日志</h2>
+            <p class="eyebrow">THE CHANGELOG</p>
+            <h2 class="section-title">每一次更新，都更进一步。</h2>
+            <p class="section-lead">产品版本与改进记录，始终在这里。</p>
             <div class="changelog">
                 <div class="release">
                     <h3>版本 0.7.0 <span class="release-date">2026-09-18</span></h3>
@@ -337,18 +374,26 @@
 <footer class="site-footer">
     <div class="container footer-inner">
         <div>
-            <strong>千机数据库管理软件（GDDBStudio）</strong>
-            <p>开源跨数据库管理客户端 · 许可协议 Apache-2.0</p>
+            <a class="footer-wordmark" href="#top">GDDB<span>Studio</span><span class="wordmark-dot">.</span></a>
+            <p>千机数据库管理软件 · 让数据连接，更有章法。</p>
+            <p>跨数据库桌面客户端</p>
             <p>作者：李夏严</p>
         </div>
         <div class="footer-links">
             <a href="#download">下载</a>
             <a href="#features">产品特点</a>
+            <a href="#security">安全说明</a>
             <a href="#changelog">更新日志</a>
         </div>
     </div>
-    <p class="copyright">&copy; 2026 GDDBStudio. All rights reserved.</p>
+    <div class="container footer-bottom"><p>&copy; 2026 GDDBStudio.</p><span>YOUR DATA. ONE STUDIO.</span><a href="#top">返回顶部 ↑</a></div>
 </footer>
+
+<dialog class="image-dialog" aria-label="软件界面截图预览">
+    <div class="dialog-toolbar"><span id="imageCaption"></span><button class="dialog-close" type="button" autofocus aria-label="关闭截图预览">关闭 <span aria-hidden="true">×</span></button></div>
+    <div class="dialog-image-wrap"><img id="dialogImage" alt=""></div>
+    <p>可在下方横向滚动查看原图 · 按 Esc 或点击空白处关闭</p>
+</dialog>
 
 <script src="config.js"></script>
 <script src="js/main.js"></script>
