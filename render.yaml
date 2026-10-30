@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: gddbstudio-website
+    runtime: static
+    buildCommand: "true"
+    staticPublishPath: .
