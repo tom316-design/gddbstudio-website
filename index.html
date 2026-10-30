@@ -50,6 +50,15 @@
         </div>
     </section>
 
+    <section class="section preview" id="preview">
+        <div class="container">
+            <figure class="shot-main">
+                <a href="assets/screenshots/data-grid.png" target="_blank" rel="noopener"><img src="assets/screenshots/data-grid.png" alt="千机数据库管理软件数据网格界面" loading="lazy"></a>
+                <figcaption>左侧连接树、中间多标签数据网格、右侧信息面板，常用操作一屏完成</figcaption>
+            </figure>
+        </div>
+    </section>
+
     <section class="section" id="features">
         <div class="container">
             <h2 class="section-title">产品特点</h2>
@@ -124,6 +133,90 @@
         </div>
     </section>
 
+    <section class="section section-alt" id="demo">
+        <div class="container">
+            <h2 class="section-title">功能演示</h2>
+            <p class="section-lead">以下截图来自软件实际界面。</p>
+
+            <div class="demo-row">
+                <div class="demo-text">
+                    <h3>1. 新建连接</h3>
+                    <p>工具栏点击“新建连接”，在数据库类型列表中选择目标数据库（支持按“国产信创”筛选），填写主机、端口、用户名和密码，点击“测试连接”成功后保存。</p>
+                    <ul>
+                        <li>可通过 URI 快速新建连接</li>
+                        <li>支持 SSL 加密连接与 SSH 隧道</li>
+                        <li>支持设置连接颜色，区分生产与测试环境</li>
+                    </ul>
+                </div>
+                <div class="demo-shots">
+                    <a href="assets/screenshots/connection-type.png" target="_blank" rel="noopener"><img src="assets/screenshots/connection-type.png" alt="新建连接时选择数据库类型" loading="lazy"></a>
+                    <a href="assets/screenshots/connection-form.png" target="_blank" rel="noopener"><img src="assets/screenshots/connection-form.png" alt="连接参数填写界面" loading="lazy"></a>
+                </div>
+            </div>
+
+            <div class="demo-row reverse">
+                <div class="demo-text">
+                    <h3>2. 数据浏览与编辑</h3>
+                    <p>双击表名即可打开数据网格，分页浏览大数据量表，支持跳页、刷新、筛选条件和查找替换。单元格可直接编辑，修改可在事务中统一提交或撤销。</p>
+                    <ul>
+                        <li>可视化构建筛选条件，也可直接编写原始 WHERE 表达式</li>
+                        <li>支持新增、删除、设为 NULL，删除操作可开启确认提示</li>
+                    </ul>
+                </div>
+                <div class="demo-shots">
+                    <a href="assets/screenshots/data-filter.png" target="_blank" rel="noopener"><img src="assets/screenshots/data-filter.png" alt="数据筛选条件构建界面" loading="lazy"></a>
+                </div>
+            </div>
+
+            <div class="demo-row">
+                <div class="demo-text">
+                    <h3>3. SQL 编辑器</h3>
+                    <p>新建查询标签页，编写 SQL 后可整段或选中部分执行，结果以表格形式展示，多条语句会生成多个结果集。</p>
+                    <ul>
+                        <li>语法高亮与自动完成，支持撤销、重做、查找替换</li>
+                        <li>一键美化 SQL，执行历史与已保存查询随时找回</li>
+                    </ul>
+                </div>
+                <div class="demo-shots">
+                    <a href="assets/screenshots/sql-editor.png" target="_blank" rel="noopener"><img src="assets/screenshots/sql-editor.png" alt="SQL 编辑器与多结果集界面" loading="lazy"></a>
+                    <a href="assets/screenshots/sql-result.png" target="_blank" rel="noopener"><img src="assets/screenshots/sql-result.png" alt="SQL 查询结果界面" loading="lazy"></a>
+                </div>
+            </div>
+
+            <div class="demo-row reverse">
+                <div class="demo-text">
+                    <h3>4. 表结构设计</h3>
+                    <p>在表设计器中查看与修改字段、索引、外键、触发器和表选项。所有修改先生成 DDL 并展示给你确认，确认后才会执行。</p>
+                </div>
+                <div class="demo-shots">
+                    <a href="assets/screenshots/table-design.png" target="_blank" rel="noopener"><img src="assets/screenshots/table-design.png" alt="表结构设计器界面" loading="lazy"></a>
+                </div>
+            </div>
+
+            <div class="demo-row">
+                <div class="demo-text">
+                    <h3>5. 数据导入、导出与传输</h3>
+                    <p>CSV 文件可按字段映射批量导入并预览前几行；数据可导出为 CSV、SQL 或 Excel；还能把数据从一个连接直接传输到另一个连接。</p>
+                </div>
+                <div class="demo-shots three">
+                    <a href="assets/screenshots/csv-import.png" target="_blank" rel="noopener"><img src="assets/screenshots/csv-import.png" alt="CSV 导入字段映射界面" loading="lazy"></a>
+                    <a href="assets/screenshots/export.png" target="_blank" rel="noopener"><img src="assets/screenshots/export.png" alt="数据导出界面" loading="lazy"></a>
+                    <a href="assets/screenshots/data-transfer.png" target="_blank" rel="noopener"><img src="assets/screenshots/data-transfer.png" alt="跨连接数据传输界面" loading="lazy"></a>
+                </div>
+            </div>
+
+            <div class="demo-row reverse">
+                <div class="demo-text">
+                    <h3>6. 个性化设置</h3>
+                    <p>可以设置界面主题、界面字体和编辑器字体，并配置自动提交、删除确认、信息面板显示以及查询结果行数上限，按自己的习惯使用。</p>
+                </div>
+                <div class="demo-shots">
+                    <a href="assets/screenshots/settings.png" target="_blank" rel="noopener"><img src="assets/screenshots/settings.png" alt="个性化设置界面" loading="lazy"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section" id="databases">
         <div class="container">
             <h2 class="section-title">支持的数据库</h2>
@@ -162,13 +255,20 @@
             <p class="section-lead">当前版本 <strong id="downloadVersion"></strong>，发布日期 <span id="downloadDate"></span>。如有新版本，请回到本页面下载最新安装包。</p>
             <div class="grid grid-3" id="downloadList"></div>
             <div class="install-steps">
-                <h3>快速上手</h3>
+                <h3>快速入门</h3>
                 <ol>
-                    <li>下载对应系统的安装包，解压到任意目录。</li>
-                    <li>双击运行 <code>GDDBStudio.exe</code>（Windows）或目录内的 <code>GDDBStudio</code> 程序（Linux）。</li>
-                    <li>点击工具栏“新建连接”，选择数据库类型，填写参数后点击“测试连接”，成功后保存。</li>
-                    <li>在左侧连接树中展开连接，双击表名即可查看数据。</li>
+                    <li>下载对应系统的安装包，解压到任意目录，双击运行 <code>GDDBStudio.exe</code>（Windows）或目录内的 <code>GDDBStudio</code> 程序（Linux）。</li>
+                    <li>点击工具栏 <strong>新建连接</strong>，选择数据库类型。</li>
+                    <li>填写主机、端口、用户名和密码，或选择 SQLite 数据库文件。</li>
+                    <li>点击 <strong>测试连接</strong>，成功后点击 <strong>确定</strong>。</li>
+                    <li>在左侧双击连接，展开数据库和表节点，双击表名查看数据。</li>
+                    <li>点击 <strong>新建查询</strong>，编写并执行 SQL。</li>
                 </ol>
+                <p class="note">想先熟悉软件，可以选择 SQLite，无需部署数据库服务，也无需填写主机和端口。</p>
+                <figure class="shot-inline">
+                    <a href="assets/screenshots/welcome.png" target="_blank" rel="noopener"><img src="assets/screenshots/welcome.png" alt="软件欢迎首页" loading="lazy"></a>
+                    <figcaption>首次启动时的欢迎首页，提供新建连接入口和三步上手指引</figcaption>
+                </figure>
                 <p class="note">升级方法：下载新版本安装包，解压到新目录即可。连接配置保存在用户目录中，一般无需重新配置。</p>
             </div>
         </div>
