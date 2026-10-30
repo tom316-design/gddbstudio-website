@@ -11,7 +11,7 @@ const css = fs.readFileSync(path.join(root, "css/style.css"), "utf8");
 test("local resources exist and section anchors resolve", () => {
     const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
     assert.equal(new Set(ids).size, ids.length, "duplicate HTML ids");
-    for (const match of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
+    for (const match of html.matchAll(/(?<![-\w])(?:href|src)="([^"]+)"/g)) {
         const target = match[1];
         if (target.startsWith("#")) {
             assert.ok(ids.includes(target.slice(1)), "missing anchor: " + target);
@@ -19,6 +19,17 @@ test("local resources exist and section anchors resolve", () => {
             assert.ok(fs.existsSync(path.join(root, target)), "missing resource: " + target);
         }
     }
+    for (const file of ["assets/demo/workflow.gif", "assets/demo/workflow-en.gif"]) {
+        assert.ok(fs.existsSync(path.join(root, file)), "missing demo: " + file);
+    }
+});
+
+test("every translation key used in markup exists in both dictionaries", () => {
+    const i18n = fs.readFileSync(path.join(root, "js/i18n.js"), "utf8");
+    const keys = new Set([...i18n.matchAll(/^\s*"([^"]+)":/gm)].map(match => match[1]));
+    const used = [...html.matchAll(/data-i18n(?:-[a-z]+)?="([^"]+)"/g)].map(match => match[1]);
+    for (const key of used) assert.ok(keys.has(key), "missing translation key: " + key);
+    assert.ok(used.length > 100, "translation markup is unexpectedly small");
 });
 
 test("all product screenshots have descriptive alternative text", () => {

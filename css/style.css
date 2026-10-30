@@ -43,6 +43,10 @@ code { font-family: var(--mono); background: #e5eeef; padding: 2px 5px; border-r
 .nav-download .icon { width: 16px; height: 16px; }
 .menu-toggle { color: #fff; border: 1px solid #486371; background: transparent; border-radius: 4px; padding: 8px 12px; }
 .menu-toggle span { margin-left: 10px; }
+.lang-switch { display: inline-flex; flex: none; border: 1px solid #486371; border-radius: 5px; overflow: hidden; }
+.lang-switch button { min-width: 48px; padding: 7px 11px; border: 0; background: transparent; color: #bcd0dc; font: 600 12px var(--mono); letter-spacing: .5px; }
+.lang-switch button:hover { color: #fff; background: #ffffff0d; }
+.lang-switch button[aria-pressed="true"] { color: #092e2e; background: var(--accent); }
 
 /* 网格和光晕仅用静态背景绘制，避免滚动时实时模糊。 */
 .hero { overflow: hidden; color: #fff; background: radial-gradient(ellipse at 82% 45%, #12455b85, transparent 56%), linear-gradient(#ffffff03 1px, transparent 1px), linear-gradient(90deg, #ffffff03 1px, transparent 1px), var(--night); background-size: auto, 64px 64px, 64px 64px, auto; }
@@ -82,7 +86,7 @@ code { font-family: var(--mono); background: #e5eeef; padding: 2px 5px; border-r
 .visual-note div > span { font: 9px var(--mono); color: #98b6c4; }
 .hero-bottom { border-top: 1px solid #25404e; padding-block: 20px; display: flex; justify-content: space-between; font-size: 11px; color: #88a3b1; }
 .hero-bottom a { color: #b6cfd9; }
-.hero-bottom a > span { margin-left: 20px; }
+.hero-bottom a > span:last-child { margin-left: 20px; }
 .capability-strip { border-bottom: 1px solid var(--line); background: #fff; }
 .capability-inner { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1.4fr; align-items: center; gap: 20px; padding-block: 30px; }
 .capability-inner p { font-size: 13px; color: var(--muted); }
@@ -216,7 +220,7 @@ details[open] > summary .toolkit-hint > span, .install-steps[open] > summary > s
 .dialog-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 14px 20px; }
 .dialog-toolbar > span { font-size: 12px; }
 .dialog-close { border: 1px solid #6a8796; border-radius: 4px; color: #fff; background: transparent; padding: 6px 12px; white-space: nowrap; font-size: 12px; }
-.dialog-close span { margin-left: 12px; font-size: 18px; }
+.dialog-close > span:last-child { margin-left: 12px; font-size: 18px; }
 .dialog-image-wrap { overflow: auto; max-height: calc(94dvh - 110px); background: #eaf0f2; }
 .dialog-image-wrap img { display: block; width: 100%; height: auto; min-width: 720px; }
 .image-dialog > p { padding: 10px 20px; color: #9fb8c5; font-size: 11px; }
@@ -243,8 +247,9 @@ details[open] > summary .toolkit-hint > span, .install-steps[open] > summary > s
 @media (max-width: 800px) {
     .container { width: calc(100% - 40px); }
     .header-inner { min-height: 72px; flex-wrap: wrap; gap: 0; }
-    .menu-toggle:not([hidden]) { display: block; }
-    .site-nav { width: 100%; flex-wrap: wrap; gap: 10px 20px; padding-block: 16px; border-top: 1px solid #263f4d; }
+    .menu-toggle:not([hidden]) { display: block; order: 3; }
+    .lang-switch { order: 2; }
+    .site-nav { order: 4; width: 100%; flex-wrap: wrap; gap: 10px 20px; padding-block: 16px; border-top: 1px solid #263f4d; }
     .site-nav .nav-download { padding: 6px 12px; }
     .hero-inner { grid-template-columns: 1fr; gap: 50px; padding-block: 54px 44px; }
     .hero-copy { max-width: 590px; }

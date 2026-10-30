@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>千机数据库管理软件 GDDBStudio - 跨数据库管理客户端</title>
-    <meta name="description" content="千机数据库管理软件（GDDBStudio）是一款桌面端跨数据库管理客户端，支持 MySQL、PostgreSQL、SQL Server、Oracle、达梦、金仓等主流及国产数据库。">
+    <title data-i18n="meta.title">千机数据库管理软件 GDDBStudio - 跨数据库管理客户端</title>
+    <meta name="description" data-i18n-content="meta.desc" content="千机数据库管理软件（GDDBStudio）是一款桌面端跨数据库管理客户端，支持 MySQL、PostgreSQL、SQL Server、Oracle、达梦、金仓等主流及国产数据库。">
     <link rel="icon" href="assets/app.svg" type="image/svg+xml">
     <meta name="theme-color" content="#091c2b">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<a class="skip-link" href="#top">跳至主要内容</a>
+<a class="skip-link" href="#top" data-i18n="skip">跳至主要内容</a>
 <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
     <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
@@ -28,17 +28,21 @@
             <img src="assets/app.svg" alt="" width="36" height="36">
             <span class="brand-text">
                 <strong>GDDB<span>Studio</span></strong>
-                <small>千机数据库管理软件</small>
+                <small data-i18n="brand.sub">千机数据库管理软件</small>
             </span>
         </a>
-        <button class="menu-toggle" type="button" aria-controls="siteNav" aria-expanded="false" hidden>菜单 <span aria-hidden="true">+</span></button>
-        <nav class="site-nav" id="siteNav" aria-label="主要导航">
-            <a href="#features">产品特点</a>
-            <a href="#demo">功能演示</a>
-            <a href="#databases">支持数据库</a>
-            <a href="#changelog">更新日志</a>
-            <a class="nav-download" href="#download">下载客户端 <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg></a>
+        <nav class="site-nav" id="siteNav" aria-label="主要导航" data-i18n-aria-label="nav.label">
+            <a href="#features" data-i18n="nav.features">产品特点</a>
+            <a href="#demo" data-i18n="nav.demo">功能演示</a>
+            <a href="#databases" data-i18n="nav.databases">支持数据库</a>
+            <a href="#changelog" data-i18n="nav.changelog">更新日志</a>
+            <a class="nav-download" href="#download"><span data-i18n="nav.download">下载客户端</span> <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg></a>
         </nav>
+        <div class="lang-switch" role="group" aria-label="语言 / Language" data-i18n-aria-label="lang.group">
+            <button type="button" data-lang-option="zh" aria-pressed="true">中文</button>
+            <button type="button" data-lang-option="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="menu-toggle" type="button" aria-controls="siteNav" aria-expanded="false" hidden><span data-i18n="nav.menu">菜单</span> <span aria-hidden="true">+</span></button>
     </div>
 </header>
 
@@ -48,63 +52,63 @@
         <div class="container hero-inner">
             <div class="hero-copy">
                 <div class="hero-eyebrow"><span class="status-dot"></span> YOUR DATA. ONE STUDIO.</div>
-                <h1>让数据连接，<br><span>更有章法。</span></h1>
-                <p class="hero-sub">千机数据库管理软件 · GDDBStudio</p>
-                <p class="hero-desc">从 SQL 到数据编辑，从主流数据库到国产信创。<br class="desktop-break">将日常数据库工作，收拢到一个专注的桌面工作台。</p>
+                <h1 data-i18n="hero.title">让数据连接，<br><span>更有章法。</span></h1>
+                <p class="hero-sub" data-i18n="hero.sub">千机数据库管理软件 · GDDBStudio</p>
+                <p class="hero-desc" data-i18n="hero.desc">从 SQL 到数据编辑，从主流数据库到国产信创。<br class="desktop-break">将日常数据库工作，收拢到一个专注的桌面工作台。</p>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="#download"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> 下载客户端 <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                    <a class="btn btn-ghost" href="#demo">探索产品 <span aria-hidden="true">↗</span></a>
+                    <a class="btn btn-primary" href="#download"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> <span data-i18n="hero.download">下载客户端</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                    <a class="btn btn-ghost" href="#demo"><span data-i18n="hero.explore">探索产品</span> <span aria-hidden="true">↗</span></a>
                 </div>
-                <div class="hero-meta"><span class="badge" id="heroVersion">当前版本</span><span>Windows / UOS / 麒麟 / Linux</span></div>
+                <div class="hero-meta"><span class="badge" id="heroVersion">当前版本</span><span data-i18n="hero.platforms">Windows / UOS / 麒麟 / Linux</span></div>
             </div>
             <div class="hero-visual">
                 <div class="visual-caption"><span>THE DATABASE WORKSPACE</span><span>SQL / DATA / SCHEMA</span></div>
                 <div class="app-frame">
-                    <div class="frame-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>GDDBStudio / 查询工作区</span><span class="frame-status"><span class="status-dot"></span> 桌面客户端</span></div>
-                    <a class="screenshot-link hero-shot" href="assets/demo/workflow.gif" target="_blank" rel="noopener"><img src="assets/demo/workflow.gif" alt="GDDBStudio 操作演示动图：依次演示新建连接、打开数据表、管理数据和执行 SQL 查询，循环播放" width="1000" height="620" fetchpriority="high"><span class="zoom-label">查看完整演示 ↗</span></a>
-                    <div class="frame-footer"><span><span class="status-dot"></span> 本地工作台</span><span>连接 · 查询 · 设计 · 传输</span></div>
+                    <div class="frame-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span data-i18n="frame.title">GDDBStudio / 查询工作区</span><span class="frame-status"><span class="status-dot"></span> <span data-i18n="frame.client">桌面客户端</span></span></div>
+                    <a class="screenshot-link hero-shot" href="assets/demo/workflow.gif" data-i18n-href="demo.gif" target="_blank" rel="noopener"><img src="assets/demo/workflow.gif" data-i18n-src="demo.gif" alt="GDDBStudio 操作演示动图：依次演示新建连接、打开数据表、管理数据和执行 SQL 查询，循环播放" data-i18n-alt="alt.demo" width="1000" height="620" fetchpriority="high"><span class="zoom-label" data-i18n="hero.zoom">查看完整演示 ↗</span></a>
+                    <div class="frame-footer"><span><span class="status-dot"></span> <span data-i18n="frame.local">本地工作台</span></span><span data-i18n="frame.tags">连接 · 查询 · 设计 · 传输</span></div>
                 </div>
-                <div class="visual-note"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg><div><strong>多种数据库，同一个工作台</strong><span>MySQL · PostgreSQL · 达梦 · 金仓 …</span></div></div>
+                <div class="visual-note"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg><div><strong data-i18n="note.title">多种数据库，同一个工作台</strong><span data-i18n="note.sub">MySQL · PostgreSQL · 达梦 · 金仓 …</span></div></div>
             </div>
         </div>
-        <div class="container hero-bottom"><span>专为开发者、DBA 与数据库运维打造</span><a href="#demo">向下探索 <span aria-hidden="true">↓</span></a></div>
+        <div class="container hero-bottom"><span data-i18n="bottom.text">专为开发者、DBA 与数据库运维打造</span><a href="#demo"><span data-i18n="bottom.link">向下探索</span> <span aria-hidden="true">↓</span></a></div>
     </section>
 
     <section class="capability-strip" aria-label="产品概览">
         <div class="container capability-inner">
-            <p>连接不止一种<br><strong>体验始终如一</strong></p>
-            <div><strong>20<span>种</span></strong><span>已注册数据库类型</span></div>
-            <div><strong>12<span>种</span></strong><span>国产信创数据库</span></div>
-            <div><strong>01</strong><span>统一桌面工作台</span></div>
-            <div class="strip-note"><span class="status-dot"></span> 配置与历史，本地存储</div>
+            <p data-i18n="strip.lead">连接不止一种<br><strong>体验始终如一</strong></p>
+            <div><strong>20<span data-i18n="strip.unit">种</span></strong><span data-i18n="strip.reg">已注册数据库类型</span></div>
+            <div><strong>12<span data-i18n="strip.unit">种</span></strong><span data-i18n="strip.domestic">国产信创数据库</span></div>
+            <div><strong>01</strong><span data-i18n="strip.unified">统一桌面工作台</span></div>
+            <div class="strip-note"><span class="status-dot"></span> <span data-i18n="strip.local">配置与历史，本地存储</span></div>
         </div>
     </section>
 
     <section class="section" id="features">
         <div class="container">
             <p class="eyebrow">BUILT FOR YOUR WORKFLOW</p>
-            <h2 class="section-title">少一点切换，多一点专注。</h2>
-            <p class="section-lead">把连接、查询、编辑与维护串在一起，让工具跟上你的工作节奏。</p>
+            <h2 class="section-title" data-i18n="features.title">少一点切换，多一点专注。</h2>
+            <p class="section-lead" data-i18n="features.lead">把连接、查询、编辑与维护串在一起，让工具跟上你的工作节奏。</p>
             <div class="grid grid-4">
                 <article class="card">
                     <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg></div>
-                    <h3>多数据库统一入口</h3>
-                    <p>MySQL、MariaDB、SQLite、PostgreSQL、SQL Server、Oracle、Redis、MongoDB 以及多款国产数据库，统一在一个软件中管理。</p>
+                    <h3 data-i18n="feat.1.title">多数据库统一入口</h3>
+                    <p data-i18n="feat.1.body">MySQL、MariaDB、SQLite、PostgreSQL、SQL Server、Oracle、Redis、MongoDB 以及多款国产数据库，统一在一个软件中管理。</p>
                 </article>
                 <article class="card">
                     <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg></div>
-                    <h3>所见即所得的数据编辑</h3>
-                    <p>分页浏览、筛选、查找替换、单元格编辑、新增删除、设为 NULL，支持事务提交与撤销修改，编辑过程可控。</p>
+                    <h3 data-i18n="feat.2.title">所见即所得的数据编辑</h3>
+                    <p data-i18n="feat.2.body">分页浏览、筛选、查找替换、单元格编辑、新增删除、设为 NULL，支持事务提交与撤销修改，编辑过程可控。</p>
                 </article>
                 <article class="card">
                     <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></div>
-                    <h3>让 SQL 编写更顺手</h3>
-                    <p>语法高亮、自动完成、整段或选中执行、停止执行、多结果集展示、SQL 美化，并保留执行历史与已保存查询。</p>
+                    <h3 data-i18n="feat.3.title">让 SQL 编写更顺手</h3>
+                    <p data-i18n="feat.3.body">语法高亮、自动完成、整段或选中执行、停止执行、多结果集展示、SQL 美化，并保留执行历史与已保存查询。</p>
                 </article>
                 <article class="card">
                     <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div>
-                    <h3>本地运行，工作留在本机</h3>
-                    <p>连接配置、界面设置、SQL 历史与运行日志保存在本机，软件不做外部网络上报。</p>
+                    <h3 data-i18n="feat.4.title">本地运行，工作留在本机</h3>
+                    <p data-i18n="feat.4.body">连接配置、界面设置、SQL 历史与运行日志保存在本机，软件不做外部网络上报。</p>
                 </article>
             </div>
         </div>
@@ -113,43 +117,43 @@
     <section class="section section-alt" id="modules">
         <div class="container">
             <details class="toolkit">
-                <summary><span><span class="eyebrow">EVERYDAY TOOLKIT</span><strong>一个工作台，九种日常能力。</strong></span><span class="toolkit-hint">展开功能清单 <span aria-hidden="true">+</span></span></summary>
+                <summary><span><span class="eyebrow">EVERYDAY TOOLKIT</span><strong data-i18n="toolkit.title">一个工作台，九种日常能力。</strong></span><span class="toolkit-hint" data-i18n="toolkit.hint">展开功能清单 <span aria-hidden="true">+</span></span></summary>
             <div class="grid grid-3">
                 <div class="module">
-                    <h3>连接管理</h3>
-                    <p>新建、测试、编辑、复制和删除连接；支持 URI 新建、SSL 加密、SSH 隧道、只读连接和连接颜色标识；可从 Navicat 批量导入连接。</p>
+                    <h3 data-i18n="mod.1.title">连接管理</h3>
+                    <p data-i18n="mod.1.body">新建、测试、编辑、复制和删除连接；支持 URI 新建、SSL 加密、SSH 隧道、只读连接和连接颜色标识；可从 Navicat 批量导入连接。</p>
                 </div>
                 <div class="module">
-                    <h3>对象浏览</h3>
-                    <p>按连接、数据库、模式、表、视图、字段、索引、外键、约束、触发器等层级浏览，支持搜索与刷新，并可收藏常用对象。</p>
+                    <h3 data-i18n="mod.2.title">对象浏览</h3>
+                    <p data-i18n="mod.2.body">按连接、数据库、模式、表、视图、字段、索引、外键、约束、触发器等层级浏览，支持搜索与刷新，并可收藏常用对象。</p>
                 </div>
                 <div class="module">
-                    <h3>数据网格</h3>
-                    <p>分页加载、跳页、筛选、查找与替换、编辑、新增、删除、设为 NULL，支持事务提交和撤销修改。</p>
+                    <h3 data-i18n="mod.3.title">数据网格</h3>
+                    <p data-i18n="mod.3.body">分页加载、跳页、筛选、查找与替换、编辑、新增、删除、设为 NULL，支持事务提交和撤销修改。</p>
                 </div>
                 <div class="module">
-                    <h3>SQL 编辑器</h3>
-                    <p>SQL 高亮与自动完成，支持整段与选中执行，多结果集，SQL 美化，文件保存，以及 SQL 执行历史记录。</p>
+                    <h3 data-i18n="mod.4.title">SQL 编辑器</h3>
+                    <p data-i18n="mod.4.body">SQL 高亮与自动完成，支持整段与选中执行，多结果集，SQL 美化，文件保存，以及 SQL 执行历史记录。</p>
                 </div>
                 <div class="module">
-                    <h3>表结构设计</h3>
-                    <p>新建表、编辑字段、维护索引，查看外键与触发器，配置表选项；生成 DDL 并确认后再执行，避免误操作。</p>
+                    <h3 data-i18n="mod.5.title">表结构设计</h3>
+                    <p data-i18n="mod.5.body">新建表、编辑字段、维护索引，查看外键与触发器，配置表选项；生成 DDL 并确认后再执行，避免误操作。</p>
                 </div>
                 <div class="module">
-                    <h3>数据导入导出与传输</h3>
-                    <p>CSV 导入；CSV、SQL、Excel 导出；跨连接数据传输，便于测试数据准备与结果核验。</p>
+                    <h3 data-i18n="mod.6.title">数据导入导出与传输</h3>
+                    <p data-i18n="mod.6.body">CSV 导入；CSV、SQL、Excel 导出；跨连接数据传输，便于测试数据准备与结果核验。</p>
                 </div>
                 <div class="module">
-                    <h3>备份与转储</h3>
-                    <p>支持数据库与数据表转储，结构与数据可分别导出，为备份和迁移提供基础支持。</p>
+                    <h3 data-i18n="mod.7.title">备份与转储</h3>
+                    <p data-i18n="mod.7.body">支持数据库与数据表转储，结构与数据可分别导出，为备份和迁移提供基础支持。</p>
                 </div>
                 <div class="module">
-                    <h3>用户管理与权限</h3>
-                    <p>查看与维护数据库用户账号及权限，方便管理员集中处理账号问题。</p>
+                    <h3 data-i18n="mod.8.title">用户管理与权限</h3>
+                    <p data-i18n="mod.8.body">查看与维护数据库用户账号及权限，方便管理员集中处理账号问题。</p>
                 </div>
                 <div class="module">
-                    <h3>ER 模型与个性化</h3>
-                    <p>查看 ER 模型辅助理解表关系；支持主题、界面字体、编辑器字体、自动提交、删除确认、查询行数上限等个性化设置。</p>
+                    <h3 data-i18n="mod.9.title">ER 模型与个性化</h3>
+                    <p data-i18n="mod.9.body">查看 ER 模型辅助理解表关系；支持主题、界面字体、编辑器字体、自动提交、删除确认、查询行数上限等个性化设置。</p>
                 </div>
             </div>
             </details>
@@ -159,84 +163,84 @@
     <section class="section section-alt" id="demo">
         <div class="container">
             <p class="eyebrow">A CLOSER LOOK</p>
-            <h2 class="section-title">不是概念图。是你的下一个工作台。</h2>
-            <p class="section-lead">从连接到结果，亲眼看看每一步。所有截图均来自软件实际界面，可点击放大。</p>
+            <h2 class="section-title" data-i18n="demo.title">不是概念图。是你的下一个工作台。</h2>
+            <p class="section-lead" data-i18n="demo.lead">从连接到结果，亲眼看看每一步。所有截图均来自软件实际界面，可点击放大。</p>
 
             <div class="demo-row">
                 <div class="demo-text">
-                    <h3>1. 新建连接</h3>
-                    <p>工具栏点击“新建连接”，在数据库类型列表中选择目标数据库（支持按“国产信创”筛选），填写主机、端口、用户名和密码，点击“测试连接”成功后保存。</p>
+                    <h3 data-i18n="demo.1.title">新建连接</h3>
+                    <p data-i18n="demo.1.body">工具栏点击“新建连接”，在数据库类型列表中选择目标数据库（支持按“国产信创”筛选），填写主机、端口、用户名和密码，点击“测试连接”成功后保存。</p>
                     <ul>
-                        <li>可通过 URI 快速新建连接</li>
-                        <li>支持 SSL 加密连接与 SSH 隧道</li>
-                        <li>支持设置连接颜色，区分生产与测试环境</li>
+                        <li data-i18n="demo.1.l1">可通过 URI 快速新建连接</li>
+                        <li data-i18n="demo.1.l2">支持 SSL 加密连接与 SSH 隧道</li>
+                        <li data-i18n="demo.1.l3">支持设置连接颜色，区分生产与测试环境</li>
                     </ul>
                 </div>
                 <div class="demo-shots">
-                    <a href="assets/screenshots/connection-type.png" target="_blank" rel="noopener"><img src="assets/screenshots/connection-type.png" alt="新建连接时选择数据库类型" loading="lazy"></a>
-                    <a href="assets/screenshots/connection-form.png" target="_blank" rel="noopener"><img src="assets/screenshots/connection-form.png" alt="连接参数填写界面" loading="lazy"></a>
+                    <a href="assets/screenshots/connection-type.png" target="_blank" rel="noopener"><img src="assets/screenshots/connection-type.png" alt="新建连接时选择数据库类型" data-i18n-alt="alt.connection-type" loading="lazy"></a>
+                    <a href="assets/screenshots/connection-form.png" target="_blank" rel="noopener"><img src="assets/screenshots/connection-form.png" alt="连接参数填写界面" data-i18n-alt="alt.connection-form" loading="lazy"></a>
                 </div>
             </div>
 
             <div class="demo-row reverse">
                 <div class="demo-text">
-                    <h3>2. 数据浏览与编辑</h3>
-                    <p>双击表名即可打开数据网格，分页浏览大数据量表，支持跳页、刷新、筛选条件和查找替换。单元格可直接编辑，修改可在事务中统一提交或撤销。</p>
+                    <h3 data-i18n="demo.2.title">数据浏览与编辑</h3>
+                    <p data-i18n="demo.2.body">双击表名即可打开数据网格，分页浏览大数据量表，支持跳页、刷新、筛选条件和查找替换。单元格可直接编辑，修改可在事务中统一提交或撤销。</p>
                     <ul>
-                        <li>可视化构建筛选条件，也可直接编写原始 WHERE 表达式</li>
-                        <li>支持新增、删除、设为 NULL，删除操作可开启确认提示</li>
+                        <li data-i18n="demo.2.l1">可视化构建筛选条件，也可直接编写原始 WHERE 表达式</li>
+                        <li data-i18n="demo.2.l2">支持新增、删除、设为 NULL，删除操作可开启确认提示</li>
                     </ul>
                 </div>
                 <div class="demo-shots">
-                    <a href="assets/screenshots/data-grid.png" target="_blank" rel="noopener"><img src="assets/screenshots/data-grid.png" alt="数据网格分页浏览和编辑界面" loading="lazy"></a>
-                    <a href="assets/screenshots/data-filter.png" target="_blank" rel="noopener"><img src="assets/screenshots/data-filter.png" alt="数据筛选条件构建界面" loading="lazy"></a>
+                    <a href="assets/screenshots/data-grid.png" target="_blank" rel="noopener"><img src="assets/screenshots/data-grid.png" alt="数据网格分页浏览和编辑界面" data-i18n-alt="alt.data-grid" loading="lazy"></a>
+                    <a href="assets/screenshots/data-filter.png" target="_blank" rel="noopener"><img src="assets/screenshots/data-filter.png" alt="数据筛选条件构建界面" data-i18n-alt="alt.data-filter" loading="lazy"></a>
                 </div>
             </div>
 
             <div class="demo-row">
                 <div class="demo-text">
-                    <h3>3. SQL 编辑器</h3>
-                    <p>新建查询标签页，编写 SQL 后可整段或选中部分执行，结果以表格形式展示，多条语句会生成多个结果集。</p>
+                    <h3 data-i18n="demo.3.title">SQL 编辑器</h3>
+                    <p data-i18n="demo.3.body">新建查询标签页，编写 SQL 后可整段或选中部分执行，结果以表格形式展示，多条语句会生成多个结果集。</p>
                     <ul>
-                        <li>语法高亮与自动完成，支持撤销、重做、查找替换</li>
-                        <li>一键美化 SQL，执行历史与已保存查询随时找回</li>
+                        <li data-i18n="demo.3.l1">语法高亮与自动完成，支持撤销、重做、查找替换</li>
+                        <li data-i18n="demo.3.l2">一键美化 SQL，执行历史与已保存查询随时找回</li>
                     </ul>
                 </div>
                 <div class="demo-shots">
-                    <a href="assets/screenshots/sql-editor.png" target="_blank" rel="noopener"><img src="assets/screenshots/sql-editor.png" alt="SQL 编辑器与多结果集界面" loading="lazy"></a>
-                    <a href="assets/screenshots/sql-result.png" target="_blank" rel="noopener"><img src="assets/screenshots/sql-result.png" alt="SQL 查询结果界面" loading="lazy"></a>
+                    <a href="assets/screenshots/sql-editor.png" target="_blank" rel="noopener"><img src="assets/screenshots/sql-editor.png" alt="SQL 编辑器与多结果集界面" data-i18n-alt="alt.sql-editor" loading="lazy"></a>
+                    <a href="assets/screenshots/sql-result.png" target="_blank" rel="noopener"><img src="assets/screenshots/sql-result.png" alt="SQL 查询结果界面" data-i18n-alt="alt.sql-result" loading="lazy"></a>
                 </div>
             </div>
 
             <div class="demo-row reverse">
                 <div class="demo-text">
-                    <h3>4. 表结构设计</h3>
-                    <p>在表设计器中查看与修改字段、索引、外键、触发器和表选项。所有修改先生成 DDL 并展示给你确认，确认后才会执行。</p>
+                    <h3 data-i18n="demo.4.title">表结构设计</h3>
+                    <p data-i18n="demo.4.body">在表设计器中查看与修改字段、索引、外键、触发器和表选项。所有修改先生成 DDL 并展示给你确认，确认后才会执行。</p>
                 </div>
                 <div class="demo-shots">
-                    <a href="assets/screenshots/table-design.png" target="_blank" rel="noopener"><img src="assets/screenshots/table-design.png" alt="表结构设计器界面" loading="lazy"></a>
+                    <a href="assets/screenshots/table-design.png" target="_blank" rel="noopener"><img src="assets/screenshots/table-design.png" alt="表结构设计器界面" data-i18n-alt="alt.table-design" loading="lazy"></a>
                 </div>
             </div>
 
             <div class="demo-row">
                 <div class="demo-text">
-                    <h3>5. 数据导入、导出与传输</h3>
-                    <p>CSV 文件可按字段映射批量导入并预览前几行；数据可导出为 CSV、SQL 或 Excel；还能把数据从一个连接直接传输到另一个连接。</p>
+                    <h3 data-i18n="demo.5.title">数据导入、导出与传输</h3>
+                    <p data-i18n="demo.5.body">CSV 文件可按字段映射批量导入并预览前几行；数据可导出为 CSV、SQL 或 Excel；还能把数据从一个连接直接传输到另一个连接。</p>
                 </div>
                 <div class="demo-shots three">
-                    <a href="assets/screenshots/csv-import.png" target="_blank" rel="noopener"><img src="assets/screenshots/csv-import.png" alt="CSV 导入字段映射界面" loading="lazy"></a>
-                    <a href="assets/screenshots/export.png" target="_blank" rel="noopener"><img src="assets/screenshots/export.png" alt="数据导出界面" loading="lazy"></a>
-                    <a href="assets/screenshots/data-transfer.png" target="_blank" rel="noopener"><img src="assets/screenshots/data-transfer.png" alt="跨连接数据传输界面" loading="lazy"></a>
+                    <a href="assets/screenshots/csv-import.png" target="_blank" rel="noopener"><img src="assets/screenshots/csv-import.png" alt="CSV 导入字段映射界面" data-i18n-alt="alt.csv-import" loading="lazy"></a>
+                    <a href="assets/screenshots/export.png" target="_blank" rel="noopener"><img src="assets/screenshots/export.png" alt="数据导出界面" data-i18n-alt="alt.export" loading="lazy"></a>
+                    <a href="assets/screenshots/data-transfer.png" target="_blank" rel="noopener"><img src="assets/screenshots/data-transfer.png" alt="跨连接数据传输界面" data-i18n-alt="alt.data-transfer" loading="lazy"></a>
                 </div>
             </div>
 
             <div class="demo-row reverse">
                 <div class="demo-text">
-                    <h3>6. 个性化设置</h3>
-                    <p>可以设置界面主题、界面字体和编辑器字体，并配置自动提交、删除确认、信息面板显示以及查询结果行数上限，按自己的习惯使用。</p>
+                    <h3 data-i18n="demo.6.title">个性化设置</h3>
+                    <p data-i18n="demo.6.body">可以设置界面主题、界面字体和编辑器字体，并配置自动提交、删除确认、信息面板显示以及查询结果行数上限，按自己的习惯使用。</p>
                 </div>
                 <div class="demo-shots">
-                    <a href="assets/screenshots/settings.png" target="_blank" rel="noopener"><img src="assets/screenshots/settings.png" alt="个性化设置界面" loading="lazy"></a>
+                    <a href="assets/screenshots/settings.png" target="_blank" rel="noopener"><img src="assets/screenshots/settings.png" alt="个性化设置界面" data-i18n-alt="alt.settings" loading="lazy"></a>
                 </div>
             </div>
         </div>
@@ -245,11 +249,11 @@
     <section class="section" id="databases">
         <div class="container">
             <p class="eyebrow">MANY DATABASES. ONE STUDIO.</p>
-            <h2 class="section-title">你的数据库，我们的共同语言。</h2>
-            <p class="section-lead">从熟悉的关系型数据库，到 NoSQL 与国产信创生态。保留你的选择，统一操作体验。</p>
+            <h2 class="section-title" data-i18n="db.title">你的数据库，我们的共同语言。</h2>
+            <p class="section-lead" data-i18n="db.lead">从熟悉的关系型数据库，到 NoSQL 与国产信创生态。保留你的选择，统一操作体验。</p>
             <div class="db-groups">
                 <div class="db-group">
-                    <h3>通用关系型</h3>
+                    <h3 data-i18n="db.g1">通用关系型</h3>
                     <div class="chips">
                         <span class="chip">MySQL</span><span class="chip">MariaDB</span><span class="chip">SQLite</span>
                         <span class="chip">PostgreSQL</span><span class="chip">SQL Server</span><span class="chip">Oracle</span>
@@ -262,7 +266,7 @@
                     </div>
                 </div>
                 <div class="db-group">
-                    <h3>国产数据库（信创）</h3>
+                    <h3 data-i18n="db.g3">国产数据库（信创）</h3>
                     <div class="chips">
                         <span class="chip">达梦 DM8</span><span class="chip">人大金仓 KingbaseES</span><span class="chip">openGauss</span>
                         <span class="chip">GaussDB</span><span class="chip">瀚高 HighGo</span><span class="chip">Vastbase 海量</span>
@@ -271,36 +275,36 @@
                     </div>
                 </div>
             </div>
-            <p class="note">连接时可选择数据库类型，系统会自动预填默认端口与初始库，并可通过“国产信创”标签快速筛选。</p>
-            <p class="compatibility-note">实际可用性取决于对应驱动、操作系统组件、服务端版本及账号权限。协议兼容型数据库的对象管理能力可能存在差异。</p>
+            <p class="note" data-i18n="db.note">连接时可选择数据库类型，系统会自动预填默认端口与初始库，并可通过“国产信创”标签快速筛选。</p>
+            <p class="compatibility-note" data-i18n="db.compat">实际可用性取决于对应驱动、操作系统组件、服务端版本及账号权限。协议兼容型数据库的对象管理能力可能存在差异。</p>
         </div>
     </section>
 
     <section class="section section-alt" id="download">
         <div class="container">
             <p class="eyebrow">READY WHEN YOU ARE</p>
-            <h2 class="section-title">下一次连接，从这里开始。</h2>
-            <p class="section-lead">选择你的桌面系统，下载后解压运行。<br>当前版本 <strong id="downloadVersion"></strong><span class="meta-divider">/</span>发布于 <span id="downloadDate"></span></p>
+            <h2 class="section-title" data-i18n="download.title">下一次连接，从这里开始。</h2>
+            <p class="section-lead" data-i18n="download.lead">选择你的桌面系统，下载后解压运行。<br>当前版本 <strong id="downloadVersion"></strong><span class="meta-divider">/</span>发布于 <span id="downloadDate"></span></p>
             <div class="grid grid-3" id="downloadList"></div>
             <noscript><p class="note">请启用 JavaScript 查看各平台下载入口，或前往 <a href="https://github.com/tom316-design/gddbstudio-website/releases/latest">GitHub Releases</a> 下载安装包。</p></noscript>
-            <p class="download-footnote">安装包通过 GitHub Releases 提供 · 升级前建议备份连接配置，并将新版本解压到新目录</p>
+            <p class="download-footnote" data-i18n="download.footnote">安装包通过 GitHub Releases 提供 · 升级前建议备份连接配置，并将新版本解压到新目录</p>
             <details class="install-steps">
-                <summary><span>第一次使用？从这份快速入门开始。</span><span aria-hidden="true">+</span></summary>
+                <summary><span data-i18n="install.title">第一次使用？从这份快速入门开始。</span><span aria-hidden="true">+</span></summary>
                 <div class="install-content">
                 <div>
                 <ol>
-                    <li>下载对应系统的安装包，解压到任意目录，双击运行 <code>GDDBStudio.exe</code>（Windows）或目录内的 <code>GDDBStudio</code> 程序（Linux）。</li>
-                    <li>点击工具栏 <strong>新建连接</strong>，选择数据库类型。</li>
-                    <li>填写主机、端口、用户名和密码，或选择 SQLite 数据库文件。</li>
-                    <li>点击 <strong>测试连接</strong>，成功后点击 <strong>确定</strong>。</li>
-                    <li>在左侧双击连接，展开数据库和表节点，双击表名查看数据。</li>
-                    <li>点击 <strong>新建查询</strong>，编写并执行 SQL。</li>
+                    <li data-i18n="install.1">下载对应系统的安装包，解压到任意目录，双击运行 <code>GDDBStudio.exe</code>（Windows）或目录内的 <code>GDDBStudio</code> 程序（Linux）。</li>
+                    <li data-i18n="install.2">点击工具栏 <strong>新建连接</strong>，选择数据库类型。</li>
+                    <li data-i18n="install.3">填写主机、端口、用户名和密码，或选择 SQLite 数据库文件。</li>
+                    <li data-i18n="install.4">点击 <strong>测试连接</strong>，成功后点击 <strong>确定</strong>。</li>
+                    <li data-i18n="install.5">在左侧双击连接，展开数据库和表节点，双击表名查看数据。</li>
+                    <li data-i18n="install.6">点击 <strong>新建查询</strong>，编写并执行 SQL。</li>
                 </ol>
-                <p class="note">想先熟悉软件，可以选择 SQLite，无需部署数据库服务，也无需填写主机和端口。</p>
+                <p class="note" data-i18n="install.note">想先熟悉软件，可以选择 SQLite，无需部署数据库服务，也无需填写主机和端口。</p>
                 </div>
                 <figure class="shot-inline">
-                    <a href="assets/screenshots/welcome.png" target="_blank" rel="noopener"><img src="assets/screenshots/welcome.png" alt="软件欢迎首页" loading="lazy"></a>
-                    <figcaption>首次启动时的欢迎首页，提供新建连接入口和三步上手指引</figcaption>
+                    <a href="assets/screenshots/welcome.png" target="_blank" rel="noopener"><img src="assets/screenshots/welcome.png" alt="软件欢迎首页" data-i18n-alt="alt.welcome" loading="lazy"></a>
+                    <figcaption data-i18n="install.caption">首次启动时的欢迎首页，提供新建连接入口和三步上手指引</figcaption>
                 </figure>
                 </div>
             </details>
@@ -310,24 +314,24 @@
     <section class="section" id="security">
         <div class="container">
             <p class="eyebrow">LOCAL FIRST. CLEAR BY DESIGN.</p>
-            <h2 class="section-title">本地优先，保护方式说清楚。</h2>
-            <p class="section-lead">不夸大安全承诺。了解不同系统的密码保护方式，再选择适合你的使用策略。</p>
+            <h2 class="section-title" data-i18n="sec.title">本地优先，保护方式说清楚。</h2>
+            <p class="section-lead" data-i18n="sec.lead">不夸大安全承诺。了解不同系统的密码保护方式，再选择适合你的使用策略。</p>
             <div class="grid grid-2">
                 <div class="card">
-                    <h3>Windows 版密码保护</h3>
-                    <p>保存的数据库密码使用 Windows DPAPI 进行本地保护，绑定当前 Windows 用户和计算机。连接配置文件复制到其他机器或其他 Windows 账号下无法解密密码。</p>
+                    <h3 data-i18n="sec.1.title">Windows 版密码保护</h3>
+                    <p data-i18n="sec.1.body">保存的数据库密码使用 Windows DPAPI 进行本地保护，绑定当前 Windows 用户和计算机。连接配置文件复制到其他机器或其他 Windows 账号下无法解密密码。</p>
                 </div>
                 <div class="card">
-                    <h3>Linux 版密码保护</h3>
-                    <p>Linux 版当前为降级保护，仅适合开发调试环境。在生产或高安全级别场景下，建议不勾选“保存密码”，每次连接时手动输入。</p>
+                    <h3 data-i18n="sec.2.title">Linux 版密码保护</h3>
+                    <p data-i18n="sec.2.body">Linux 版当前为降级保护，仅适合开发调试环境。在生产或高安全级别场景下，建议不勾选“保存密码”，每次连接时手动输入。</p>
                 </div>
                 <div class="card">
-                    <h3>本地优先</h3>
-                    <p>连接配置、界面设置、SQL 执行历史和运行日志默认保存在本机，软件不进行外部网络上报。</p>
+                    <h3 data-i18n="sec.3.title">本地优先</h3>
+                    <p data-i18n="sec.3.body">连接配置、界面设置、SQL 执行历史和运行日志默认保存在本机，软件不进行外部网络上报。</p>
                 </div>
                 <div class="card">
-                    <h3>最小权限建议</h3>
-                    <p>建议为软件使用的数据库账号分配所需的最小权限；对生产库可使用只读连接，降低误写入风险。</p>
+                    <h3 data-i18n="sec.4.title">最小权限建议</h3>
+                    <p data-i18n="sec.4.body">建议为软件使用的数据库账号分配所需的最小权限；对生产库可使用只读连接，降低误写入风险。</p>
                 </div>
             </div>
         </div>
@@ -336,36 +340,36 @@
     <section class="section section-alt" id="changelog">
         <div class="container">
             <p class="eyebrow">THE CHANGELOG</p>
-            <h2 class="section-title">每一次更新，都更进一步。</h2>
-            <p class="section-lead">产品版本与改进记录，始终在这里。</p>
+            <h2 class="section-title" data-i18n="cl.title">每一次更新，都更进一步。</h2>
+            <p class="section-lead" data-i18n="cl.lead">产品版本与改进记录，始终在这里。</p>
             <div class="changelog">
                 <div class="release">
-                    <h3>版本 0.7.0 <span class="release-date">2026-09-18</span></h3>
+                    <h3><span data-i18n="cl.v070">版本 0.7.0</span> <span class="release-date">2026-09-18</span></h3>
                     <ul>
-                        <li><strong>[新功能]</strong> 新增产品化欢迎首页，展示软件定位、版本、核心能力和上手指引。</li>
-                        <li><strong>[新功能]</strong> 有连接配置时，首页提供“继续使用”入口，可直接连接并展开连接树。</li>
-                        <li><strong>[改进]</strong> 新建连接向导支持自适应尺寸，数据库类型列表可滚动，底部按钮始终可见。</li>
-                        <li><strong>[改进]</strong> 欢迎首页展示真实的密码保护状态，并提示关闭“保存密码”的方式。</li>
+                        <li data-i18n="cl.070.1"><strong>[新功能]</strong> 新增产品化欢迎首页，展示软件定位、版本、核心能力和上手指引。</li>
+                        <li data-i18n="cl.070.2"><strong>[新功能]</strong> 有连接配置时，首页提供“继续使用”入口，可直接连接并展开连接树。</li>
+                        <li data-i18n="cl.070.3"><strong>[改进]</strong> 新建连接向导支持自适应尺寸，数据库类型列表可滚动，底部按钮始终可见。</li>
+                        <li data-i18n="cl.070.4"><strong>[改进]</strong> 欢迎首页展示真实的密码保护状态，并提示关闭“保存密码”的方式。</li>
                     </ul>
                 </div>
                 <div class="release">
-                    <h3>版本 0.6.0 <span class="release-date">2026-08-20</span></h3>
+                    <h3><span data-i18n="cl.v060">版本 0.6.0</span> <span class="release-date">2026-08-20</span></h3>
                     <ul>
-                        <li><strong>[新功能]</strong> 全面支持 12 种国产（信创）数据库，新增“国产信创”筛选标签。</li>
-                        <li><strong>[新功能]</strong> URI 新建连接支持多种国产库协议。</li>
-                        <li><strong>[改进]</strong> 各产品自动预填默认端口、用户与初始库。</li>
+                        <li data-i18n="cl.060.1"><strong>[新功能]</strong> 全面支持 12 种国产（信创）数据库，新增“国产信创”筛选标签。</li>
+                        <li data-i18n="cl.060.2"><strong>[新功能]</strong> URI 新建连接支持多种国产库协议。</li>
+                        <li data-i18n="cl.060.3"><strong>[改进]</strong> 各产品自动预填默认端口、用户与初始库。</li>
                     </ul>
                 </div>
                 <div class="release">
-                    <h3>版本 0.5.1 <span class="release-date">2026-08-12</span></h3>
+                    <h3><span data-i18n="cl.v051">版本 0.5.1</span> <span class="release-date">2026-08-12</span></h3>
                     <ul>
-                        <li><strong>[新功能]</strong> 数据网格支持查找与替换（Ctrl+F / Ctrl+H）。</li>
-                        <li><strong>[新功能]</strong> 支持从 Navicat 注册表导入连接，支持连接树转储 SQL 文件。</li>
-                        <li><strong>[新功能]</strong> SQL 编辑器支持撤销、重做、查找与替换。</li>
+                        <li data-i18n="cl.051.1"><strong>[新功能]</strong> 数据网格支持查找与替换（Ctrl+F / Ctrl+H）。</li>
+                        <li data-i18n="cl.051.2"><strong>[新功能]</strong> 支持从 Navicat 注册表导入连接，支持连接树转储 SQL 文件。</li>
+                        <li data-i18n="cl.051.3"><strong>[新功能]</strong> SQL 编辑器支持撤销、重做、查找与替换。</li>
                     </ul>
                 </div>
             </div>
-            <p class="note"><a href="downloads/CHANGELOG.txt" target="_blank" rel="noopener">查看完整更新日志</a></p>
+            <p class="note"><a href="downloads/CHANGELOG.txt" target="_blank" rel="noopener" data-i18n="cl.link">查看完整更新日志</a></p>
         </div>
     </section>
 
@@ -375,27 +379,28 @@
     <div class="container footer-inner">
         <div>
             <a class="footer-wordmark" href="#top">GDDB<span>Studio</span><span class="wordmark-dot">.</span></a>
-            <p>千机数据库管理软件 · 让数据连接，更有章法。</p>
-            <p>跨数据库桌面客户端</p>
-            <p>作者：李夏严</p>
+            <p data-i18n="footer.tagline">千机数据库管理软件 · 让数据连接，更有章法。</p>
+            <p data-i18n="footer.desc">跨数据库桌面客户端</p>
+            <p data-i18n="footer.author">作者：李夏严</p>
         </div>
         <div class="footer-links">
-            <a href="#download">下载</a>
-            <a href="#features">产品特点</a>
-            <a href="#security">安全说明</a>
-            <a href="#changelog">更新日志</a>
+            <a href="#download" data-i18n="footer.dl">下载</a>
+            <a href="#features" data-i18n="footer.features">产品特点</a>
+            <a href="#security" data-i18n="footer.security">安全说明</a>
+            <a href="#changelog" data-i18n="footer.changelog">更新日志</a>
         </div>
     </div>
-    <div class="container footer-bottom"><p>&copy; 2026 GDDBStudio.</p><span>YOUR DATA. ONE STUDIO.</span><a href="#top">返回顶部 ↑</a></div>
+    <div class="container footer-bottom"><p>&copy; 2026 GDDBStudio.</p><span>YOUR DATA. ONE STUDIO.</span><a href="#top" data-i18n="footer.top">返回顶部 ↑</a></div>
 </footer>
 
-<dialog class="image-dialog" aria-label="软件界面截图预览">
-    <div class="dialog-toolbar"><span id="imageCaption"></span><button class="dialog-close" type="button" autofocus aria-label="关闭截图预览">关闭 <span aria-hidden="true">×</span></button></div>
+<dialog class="image-dialog" aria-label="软件界面截图预览" data-i18n-aria-label="dialog.label">
+    <div class="dialog-toolbar"><span id="imageCaption"></span><button class="dialog-close" type="button" autofocus><span data-i18n="dialog.close">关闭</span> <span aria-hidden="true">×</span></button></div>
     <div class="dialog-image-wrap"><img id="dialogImage" alt=""></div>
-    <p>可在下方横向滚动查看原图 · 按 Esc 或点击空白处关闭</p>
+    <p data-i18n="dialog.hint">可在下方横向滚动查看原图 · 按 Esc 或点击空白处关闭</p>
 </dialog>
 
 <script src="config.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

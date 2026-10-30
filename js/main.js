@@ -1,10 +1,16 @@
 (function () {
     var site = window.GDDB_SITE || {};
+    var i18n = window.GDDB_I18N;
+    var tr = i18n.tr;
 
-    function setText(id, text) {
-        var el = document.getElementById(id);
-        if (el) el.textContent = text;
-    }
+    var TABS = [
+        ["连接管理", "tab.connections"],
+        ["数据编辑", "tab.data"],
+        ["SQL 查询", "tab.sql"],
+        ["表结构设计", "tab.design"],
+        ["导入与传输", "tab.transfer"],
+        ["个性化", "tab.personal"]
+    ];
 
     function el(tag, className, text) {
         var node = document.createElement(tag);
@@ -24,25 +30,40 @@
         return svg;
     }
 
-    function renderDownloads(items) {
+    function setText(id, text) {
+        var node = document.getElementById(id);
+        if (node) node.textContent = text;
+    }
+
+    function renderVersion() {
+        if (site.version) {
+            setText("heroVersion", tr("当前版本 V", "hero.version") + site.version);
+            setText("downloadVersion", "V" + site.version);
+        }
+        if (site.releaseDate) setText("downloadDate", site.releaseDate);
+    }
+
+    function renderDownloads() {
         var list = document.getElementById("downloadList");
         if (!list) return;
-        items.forEach(function (item) {
+        list.textContent = "";
+        (site.downloads || []).forEach(function (item) {
+            var copy = i18n.lang === "en" && item.en ? item.en : item;
             var card = el("div", "card download-card");
             card.appendChild(icon(item.platform === "Windows" ? "i-window" : "i-terminal", "platform-icon"));
-            card.appendChild(el("span", "platform-tag", item.platform + " · " + item.arch));
-            card.appendChild(el("h3", "", item.title));
-            card.appendChild(el("p", "requirement", "运行环境：" + item.requirement));
-            card.appendChild(el("p", "", item.note));
+            card.appendChild(el("span", "platform-tag", copy.platform + " · " + item.arch));
+            card.appendChild(el("h3", "", copy.title));
+            card.appendChild(el("p", "requirement", tr("运行环境：", "dl.req") + copy.requirement));
+            card.appendChild(el("p", "", copy.note));
 
             if (item.available === false) {
-                var unavailable = el("span", "btn btn-disabled", "暂未发布");
+                var unavailable = el("span", "btn btn-disabled", tr("暂未发布", "dl.unavailable"));
                 unavailable.setAttribute("aria-disabled", "true");
                 card.appendChild(unavailable);
             } else {
-                var link = el("a", "btn btn-primary", "下载 V" + site.version);
+                var link = el("a", "btn btn-primary", tr("下载 V", "dl.prefix") + site.version);
                 link.href = item.file;
-                link.setAttribute("aria-label", "下载 " + item.title + " V" + site.version);
+                link.setAttribute("aria-label", link.textContent + " - " + copy.title);
                 link.appendChild(icon("i-download"));
                 card.appendChild(link);
             }
@@ -53,27 +74,28 @@
     function initDemoTabs() {
         var section = document.getElementById("demo");
         var panels = Array.prototype.slice.call(section.querySelectorAll(".demo-row"));
-        var names = ["连接管理", "数据编辑", "SQL 查询", "表结构设计", "导入与传输", "个性化"];
-        var tablist = el("div", "demo-tabs");
-        tablist.setAttribute("role", "tablist");
-        tablist.setAttribute("aria-label", "产品功能演示");
-        var tabs = panels.map(function (panel, index) {
+        var list = el("div", "demo-tabs");
+        var records = [];
+        list.setAttribute("role", "tablist");
+        list.setAttribute("aria-label", "产品功能演示");
+
+        panels.forEach(function (panel, index) {
             var number = ("0" + (index + 1)).slice(-2);
             var tab = el("button", "demo-tab");
+            var label = document.createTextNode("");
             tab.type = "button";
             tab.id = "demo-tab-" + index;
             tab.setAttribute("role", "tab");
             tab.setAttribute("aria-controls", "demo-panel-" + index);
             tab.appendChild(el("span", "", number));
-            tab.appendChild(document.createTextNode(names[index]));
+            tab.appendChild(label);
             panel.id = "demo-panel-" + index;
             panel.setAttribute("role", "tabpanel");
             panel.setAttribute("aria-labelledby", tab.id);
             panel.tabIndex = 0;
             var text = panel.querySelector(".demo-text");
             text.insertBefore(el("span", "demo-number", "WORKFLOW / " + number), text.firstChild);
-            var heading = panel.querySelector("h3");
-            heading.textContent = heading.textContent.replace(/^\d+\.\s*/, "");
+            records.push({ label: label, zh: TABS[index][0], key: TABS[index][1] });
             tab.addEventListener("click", function () { activate(index); });
             tab.addEventListener("keydown", function (event) {
                 var next;
@@ -84,20 +106,32 @@
                 if (next === undefined) return;
                 event.preventDefault();
                 activate(next);
-                tabs[next].focus();
+                tabsNodes[next].focus();
             });
-            tablist.appendChild(tab);
-            return tab;
+            list.appendChild(tab);
         });
+
+        var tabsNodes = Array.prototype.slice.call(list.querySelectorAll(".demo-tab"));
+
         function activate(index) {
             panels.forEach(function (panel, i) {
                 panel.hidden = i !== index;
-                tabs[i].setAttribute("aria-selected", String(i === index));
-                tabs[i].tabIndex = i === index ? 0 : -1;
+                tabsNodes[i].setAttribute("aria-selected", String(i === index));
+                tabsNodes[i].tabIndex = i === index ? 0 : -1;
             });
         }
-        panels[0].parentNode.insertBefore(tablist, panels[0]);
+
+        function renderTabLabels() {
+            records.forEach(function (record, index) {
+                record.label.nodeValue = tr(record.zh, record.key);
+                panels[index].querySelector(".demo-number").textContent = "WORKFLOW / " + ("0" + (index + 1)).slice(-2);
+            });
+        }
+
+        panels[0].parentNode.insertBefore(list, panels[0]);
         activate(0);
+        renderTabLabels();
+        document.addEventListener("sitelangchange", renderTabLabels);
     }
 
     function initMenu() {
@@ -142,7 +176,6 @@
         document.querySelectorAll('a[href^="assets/screenshots/"]').forEach(function (link) {
             var thumbnail = link.querySelector("img");
             link.setAttribute("aria-haspopup", "dialog");
-            link.setAttribute("aria-label", "放大查看：" + thumbnail.alt);
             link.addEventListener("click", function (event) {
                 // 保留 Ctrl/Cmd 点击和新标签页的浏览器默认行为。
                 if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
@@ -168,13 +201,14 @@
         });
     }
 
-    if (site.version) {
-        setText("heroVersion", "当前版本 V" + site.version);
-        setText("downloadVersion", "V" + site.version);
+    function renderLocalized() {
+        renderVersion();
+        renderDownloads();
     }
-    if (site.releaseDate) setText("downloadDate", site.releaseDate);
-    renderDownloads(site.downloads || []);
+
     initDemoTabs();
     initMenu();
     initImageViewer();
+    renderLocalized();
+    document.addEventListener("sitelangchange", renderLocalized);
 })();

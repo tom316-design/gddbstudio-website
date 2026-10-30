@@ -14,7 +14,13 @@ window.GDDB_SITE = {
             title: "Windows 解压即用版",
             file: RELEASE_BASE + "GDDBStudio-windows-x64.zip",
             requirement: "Windows 64 位桌面系统",
-            note: "解压到任意目录后双击 GDDBStudio.exe 即可运行，无需安装。"
+            note: "解压到任意目录后双击 GDDBStudio.exe 即可运行，无需安装。",
+            en: {
+                platform: "Windows",
+                title: "Windows (unzip and run)",
+                requirement: "64-bit Windows desktop",
+                note: "Extract anywhere, then double-click GDDBStudio.exe. No installation needed."
+            }
         },
         {
             platform: "统信 UOS",
@@ -22,7 +28,13 @@ window.GDDB_SITE = {
             title: "统信 UOS 20 ARM64 版",
             file: RELEASE_BASE + "GDDBStudio-uos-20-aarch64.tar.gz",
             requirement: "统信 UOS 20 (ARM64)，glibc 2.28 及以上",
-            note: "解压后保留整个 GDDBStudio 目录，运行其中的 GDDBStudio 可执行文件。"
+            note: "解压后保留整个 GDDBStudio 目录，运行其中的 GDDBStudio 可执行文件。",
+            en: {
+                platform: "UnionTech UOS",
+                title: "UnionTech UOS 20 ARM64",
+                requirement: "UnionTech UOS 20 (ARM64), glibc 2.28 or later",
+                note: "Keep the whole GDDBStudio folder after extracting, then run the GDDBStudio executable inside."
+            }
         },
         {
             platform: "银河麒麟 / 通用 Linux",
@@ -31,7 +43,13 @@ window.GDDB_SITE = {
             file: RELEASE_BASE + "GDDBStudio-linux-x86_64.tar.gz",
             requirement: "主流 Linux 桌面发行版 64 位",
             note: "解压后保留整个 GDDBStudio 目录，不要删除 _internal 目录。",
-            available: false
+            available: false,
+            en: {
+                platform: "Kylin / Generic Linux",
+                title: "Linux x86_64",
+                requirement: "64-bit mainstream Linux desktop distributions",
+                note: "Keep the whole GDDBStudio folder and do not delete the _internal directory."
+            }
         }
     ],
     changelog: "downloads/CHANGELOG.txt"
